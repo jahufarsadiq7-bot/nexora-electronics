@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Nexora Electronics"
+description = "A premium, mobile-friendly electronics business website for Nexora Electronics, featuring product discovery, company information, contact details, and direct WhatsApp contact."
+version = "1.0.0"
+id = "artifacts/nexora-electronics"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25479
+
+[services.development]
+run = "pnpm --filter @workspace/nexora-electronics run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nexora-electronics", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/nexora-electronics/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25479"
+BASE_PATH = "/"
