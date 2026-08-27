@@ -410,7 +410,7 @@ function Products({ activeCategory, onCategorySelect }: { activeCategory: string
           </div>
         )}
         <div className="mt-10 flex items-center justify-between border-t border-[#d8d3c8] pt-5 text-[11px] text-[#737b7a]">
-          <span>{visibleProducts.length} of {products.length} fictional objects</span>
+          <span>{visibleProducts.length} of {apiProducts.length} products</span>
           <span className="hidden items-center gap-2 sm:flex"><Sparkles size={14} className="text-[#d27b60]" /> New shapes arrive seasonally</span>
         </div>
       </div>
