@@ -112,10 +112,11 @@ const categoryItems = ['Accessories', 'Gadgets'];
 function Logo() {
   return (
     <a href="#home" className="flex items-center gap-2.5" data-testid="link-logo">
-      <span className="grid h-8 w-8 place-items-center rounded-[10px] bg-[#112431] text-[#42d9e8]">
-        <span className="h-3 w-3 rounded-full border-2 border-current" />
-      </span>
-      <span className="display-font text-[17px] font-semibold tracking-[-0.04em]">nexora</span>
+      <img
+        src="/984089b6-d282-411d-8417-0e1a25002ee7.png"
+        alt="Nexora Electronics"
+        className="h-10 w-auto object-contain"
+      />
     </a>
   );
 }
